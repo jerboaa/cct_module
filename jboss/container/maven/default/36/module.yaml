@@ -1,6 +1,6 @@
 schema_version: 1
 name: jboss.container.maven.default.bash
-version: '3.6'
+version: '0!3.6'
 description: ^
   Provides basic Maven capabilities to an image, with support for configuring
   settings.xml using the environment variables described in
