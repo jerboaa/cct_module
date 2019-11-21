@@ -4,8 +4,25 @@ name: "jboss.container.openj9.jdk"
 version: "8"
 description: "Installs the JDK for OpenJ9 from a binary tarball"
 
-execute:
-- script: configure.sh
+labels:
+- name: "org.jboss.product"
+  value: "openjdk"
+- name: "org.jboss.product.version"
+  value: "1.8.0"
+- name: "org.jboss.product.openjdk.version"
+  value: "1.8.0"
+
+envs:
+- name: "JAVA_HOME"
+  value: "/usr/lib/jvm/jre-1.8.0-openj9"
+- name: "JAVA_VENDOR"
+  value: "AdoptOpenJDK"
+- name: "JAVA_VERSION"
+  value: "1.8.0"
+
+modules:
+  install:
+  - name: jboss.container.user
 
 packages:
   install:
@@ -18,3 +35,6 @@ artifacts:
 - name: OpenJDK8U-jdk_x64_linux_openj9_8u232b09_openj9-0.17.0.tar.gz
   target: openj9-binary-x86_64.tar.gz
   sha256: abea758c7e102f3c4a3be8757ee0ce039a70e2d498c160400dfb83c6f7004dbf
+
+execute:
+- script: configure.sh
