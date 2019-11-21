@@ -31,10 +31,10 @@ packages:
 artifacts:
 - name: OpenJDK8U-jdk_s390x_linux_openj9_8u232b09_openj9-0.17.0.tar.gz
   target: openj9-binary-s390x.tar.gz
-  sha256: 6348ccfc7764fde558a461e36de4342ac0f480d17c76dfc1bc9b6e1477f9dc5b
+  md5: 2e5938e9aadb7edd60f51a68282cc908
 - name: OpenJDK8U-jdk_x64_linux_openj9_8u232b09_openj9-0.17.0.tar.gz
   target: openj9-binary-x86_64.tar.gz
-  sha256: abea758c7e102f3c4a3be8757ee0ce039a70e2d498c160400dfb83c6f7004dbf
+  md5: 4aa5f039682a18c1849eadd432b9f07f 
 
 execute:
 - script: configure.sh
